@@ -4,6 +4,7 @@ from rest_framework import status
 from rest_framework.response import Response
 from .models import Explorer
 from .serializers import ExplorerSerializer
+from with_travel_in_mind_api.permissions import IsOwnerOrReadOnly
 
 class ExplorerList(APIView):
     """
@@ -18,9 +19,12 @@ class ExplorerList(APIView):
 
 class ExplorerDetail(APIView):
     serializer_class = ExplorerSerializer
+    permission_classes = [IsOwnerOrReadOnly]
+
     def get_object(self, pk):
         try:
             explorer = Explorer.objects.get(pk=pk)
+            self.check_object_permissions(self.request, explorer)
             return explorer
         except Explorer.DoesNotExist:
             raise Http404
