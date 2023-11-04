@@ -13,7 +13,8 @@ class ExplorerList(APIView):
     """
     def get(self, request):
         explorers = Explorer.objects.all()
-        serializer = ExplorerSerializer(explorers, many=True)
+        serializer = ExplorerSerializer(
+            explorers, many=True, context={'request': request})
         return Response(serializer.data)
 
 
@@ -31,12 +32,14 @@ class ExplorerDetail(APIView):
     
     def get(self, request, pk):
         explorer = self.get_object(pk)
-        serializer = ExplorerSerializer(explorer)
+        serializer = ExplorerSerializer(
+            explorer, context={'request': request})
         return Response(serializer.data)
     
     def put(self, request, pk):
         explorer = self.get_object(pk)
-        serializer = ExplorerSerializer(explorer, data=request.data)
+        serializer = ExplorerSerializer(
+            explorer, data=request.data, context={'request': request})
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
