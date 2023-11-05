@@ -1,5 +1,6 @@
 from rest_framework import serializers
 from followers.models import Follower
+from django.db import IntegrityError
 
 
 class FollowerSerializer(serializers.ModelSerializer):
@@ -11,5 +12,16 @@ class FollowerSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'followed', 'followed_name'
         ]
+
+    def create(self, validated_data):
+        
+        post = validated_data.get('post')
+
+        try:
+            return super().create(validated_data)
+        except IntegrityError:
+            raise serializers.ValidationError({
+                'detail': 'possible duplicate'
+            })
 
     
