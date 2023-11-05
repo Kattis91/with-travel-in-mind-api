@@ -36,5 +36,11 @@ class ExplorerDetail(generics.RetrieveUpdateAPIView):
     Retrieve or update a profile if you're the owner.
     """
     permission_classes = [IsOwnerOrReadOnly]
-    queryset = Explorer.objects.all()
+    queryset = Explorer.objects.annotate(
+        posts_count=Count('owner__post', distinct=True),
+        followers_count=Count('owner__followed', distinct=True),
+        following_count=Count('owner__following', distinct=True),
+        favourites_count=Count('owner__favorited', distinct=True),
+        favoriting_count=Count('owner__favoriting', distinct=True)
+    )
     serializer_class = ExplorerSerializer
