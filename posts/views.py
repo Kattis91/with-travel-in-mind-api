@@ -17,7 +17,13 @@ class PostList(generics.ListCreateAPIView):
         bookmarks_count=Count('bookmarks', distinct=True)
     ).order_by('-created_at')
     filter_backends = [
-        filters.OrderingFilter
+        filters.OrderingFilter,
+        filters.SearchFilter
+    ]
+    search_fields = [
+        'owner__username',
+        'title',
+        'country'
     ]
     ordering_fields = [
         'likes_count',
