@@ -10,7 +10,10 @@ class PostSerializer(serializers.ModelSerializer):
     explorer_id = serializers.ReadOnlyField(source='owner.explorer.id')
     explorer_image = serializers.ReadOnlyField(source='owner.explorer.image.url')
     like_id = serializers.SerializerMethodField()
+    likes_count = serializers.ReadOnlyField()
     bookmark_id = serializers.SerializerMethodField()
+    bookmarks_count = serializers.ReadOnlyField()
+    comments_count = serializers.ReadOnlyField()
 
     def validate_image(self, value):
         """
@@ -64,5 +67,6 @@ class PostSerializer(serializers.ModelSerializer):
             'id', 'owner', 'is_owner', 'explorer_id',
             'explorer_image', 'created_at', 'updated_at',
             'title', 'description', 'image', 'country',
-            'like_id', 'bookmark_id'
+            'like_id', 'likes_count', 'bookmark_id', 
+            'bookmarks_count', 'comments_count'
         ]
