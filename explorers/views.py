@@ -15,7 +15,7 @@ class ExplorerList(generics.ListAPIView):
         following_count=Count('owner__following', distinct=True),
         favourites_count=Count('owner__favorited', distinct=True),
         favoriting_count=Count('owner__favoriting', distinct=True)
-    )
+    ).order_by('-created_at')
     serializer_class = ExplorerSerializer
     filter_backends = [
         filters.OrderingFilter
@@ -42,5 +42,5 @@ class ExplorerDetail(generics.RetrieveUpdateAPIView):
         following_count=Count('owner__following', distinct=True),
         favourites_count=Count('owner__favorited', distinct=True),
         favoriting_count=Count('owner__favoriting', distinct=True)
-    )
+    ).order_by('-created_at')
     serializer_class = ExplorerSerializer
