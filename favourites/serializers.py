@@ -14,9 +14,6 @@ class FavouriteSerializer(serializers.ModelSerializer):
         ]
 
     def create(self, validated_data):
-        
-        post = validated_data.get('post')
-
         try:
             return super().create(validated_data)
         except IntegrityError:
