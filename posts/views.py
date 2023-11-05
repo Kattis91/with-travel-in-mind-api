@@ -1,5 +1,5 @@
 from django.db.models import Count
-from rest_framework import generics, permissions
+from rest_framework import generics, permissions, filters
 from with_travel_in_mind_api.permissions import IsOwnerOrReadOnly
 from .models import Post
 from .serializers import PostSerializer
@@ -16,6 +16,16 @@ class PostList(generics.ListCreateAPIView):
         comments_count=Count('comment', distinct=True),
         bookmarks_count=Count('bookmarks', distinct=True)
     ).order_by('-created_at')
+    filter_backends = [
+        filters.OrderingFilter
+    ]
+    ordering_fields = [
+        'likes_count',
+        'comments_count',
+        'bookmarks_count',
+        'likes__created_at',
+        'bookmarks__created_at',
+    ]
 
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
