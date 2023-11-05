@@ -8,6 +8,11 @@ class ExplorerSerializer(serializers.ModelSerializer):
     is_owner = serializers.SerializerMethodField()
     following_id = serializers.SerializerMethodField()
     favoriting_id = serializers.SerializerMethodField()
+    posts_count = serializers.ReadOnlyField()
+    followers_count = serializers.ReadOnlyField()
+    following_count = serializers.ReadOnlyField()
+    favourites_count = serializers.ReadOnlyField()
+    favoriting_count = serializers.ReadOnlyField()
 
     def get_is_owner(self, obj):
         """
@@ -49,5 +54,7 @@ class ExplorerSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name',
             'bio', 'image', 'region', 'dream_destination', 'is_owner',
-            'following_id', 'favoriting_id'
+            'following_id', 'favoriting_id', 'posts_count', 
+            'followers_count', 'following_count','favourites_count',
+            'favoriting_count',
         ]
