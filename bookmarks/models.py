@@ -4,7 +4,11 @@ from posts.models import Post
 
 
 class Bookmark(models.Model):
-   
+    """ 
+    Enables user to bookmark posts.
+    'unique_together' makes sure a user 
+    can't bookmark the same event twice.
+    """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     post = models.ForeignKey(
         Post, related_name='bookmarks', on_delete=models.CASCADE

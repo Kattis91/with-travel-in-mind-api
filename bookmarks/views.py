@@ -5,7 +5,11 @@ from bookmarks.serializers import BookmarkSerializer
 
 
 class BookmarkList(generics.ListCreateAPIView):
-    
+    """ 
+    List all bookmarks.
+    Make it posible to add bookmarks when 
+    logged in.
+    """    
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = BookmarkSerializer
     queryset = Bookmark.objects.all()
@@ -15,7 +19,10 @@ class BookmarkList(generics.ListCreateAPIView):
 
 
 class BookmarkDetail(generics.RetrieveDestroyAPIView):
-  
+    """ 
+    Retrieve a bookmark.
+    Remove a bookmark if you are the owner.
+    """  
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = BookmarkSerializer
     queryset = Bookmark.objects.all()
