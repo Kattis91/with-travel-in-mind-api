@@ -62,7 +62,8 @@ SECRET_KEY = 'django-insecure-@2x))tk-u!g22cwsoj-&h8xwvh^fpfm@i4cxl+of$ry)&rg-v3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-kattis91-withtravelinmi-r3326jxm0dr.ws-eu105.gitpod.io']
+ALLOWED_HOSTS = ['8000-kattis91-withtravelinmi-r3326jxm0dr.ws-eu105.gitpod.io',
+                'localhost', 'with-travel-in-mind-api-a2180400f610.herokuapp.com/']
 
 
 # Application definition
