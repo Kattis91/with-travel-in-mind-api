@@ -56,8 +56,8 @@ class ExplorerSerializer(serializers.ModelSerializer):
         model = Explorer
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name',
-            'bio', 'image', 'region', 'dream_destination', 'is_owner',
-            'following_id', 'favoriting_id', 'posts_count', 
-            'followers_count', 'following_count','favourites_count',
-            'favoriting_count',
+            'bio', 'image', 'region_you_would_like_to_explore', 
+            'dream_destination', 'is_owner','following_id', 
+            'favoriting_id', 'posts_count', 'followers_count', 
+            'following_count','favourites_count','favoriting_count',
         ]
