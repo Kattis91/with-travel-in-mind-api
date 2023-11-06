@@ -19,8 +19,23 @@
 - [djangorestframework-simplejwt](https://django-rest-framework-simplejwt.readthedocs.io/en/latest/)
   - A JSON Web Token authentication plugin for the Django REST Framework.
 
+- [PyJWT](https://pyjwt.readthedocs.io/en/stable/)
+  - Python library which allows to encode and decode JSON Web Tokens (JWT).
+
 - [Cloudinary](https://cloudinary.com/)
   - The cloud platform used to store the images.
+
+- [Django Cloudinary Storage](https://pypi.org/project/django-cloudinary-storage/)
+  - Django package that facilitates integration with Cloudinary by implementing Django Storage API. 
+
+- [django-cors-headers](https://pypi.org/project/django-cors-headers/)
+  - Allows in-browser requests to the Django application from other origins.
+
+- [OAuthLib](https://pypi.org/project/oauthlib/)
+  - Framework which implements the logic of OAuth1 or OAuth2 without assuming a specific HTTP request object or web framework.
+
+- [Requests-OAuthlib](https://requests-oauthlib.readthedocs.io/en/latest/)
+  - uses the Python Requests and OAuthlib libraries to provide an easy-to-use Python interface for building OAuth1 and OAuth2 clients.
 
 - [Pillow](https://pypi.org/project/Pillow/)
   - The Python Imaging Library that adds image processing capabilities to the Python interpreter.
@@ -48,5 +63,17 @@
 
 - [Heroku](https://www.heroku.com/)
   - The cloud platform used to deploy the project into live environment.
+
+- [ASGI](https://asgi.readthedocs.io/en/latest/)
+  - Asynchronous Server Gateway Interface (spiritual successor to WSGI) that is intended to provide a standard interface between async-capable Python web servers, frameworks, and applications.
+
+- [python3-openid](https://pypi.org/project/python3-openid/) 
+  - A set of Python packages to support use of the OpenID decentralized identity system in the application, update to Python 3.
+
+- [pytz](https://pypi.org/project/pytz/)
+  - Library that allows time-zone calculations in Python applications and also allows us to create timezone aware datetime instances. 
+
+- [sqlparse](https://pypi.org/project/sqlparse/)
+  - A non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
 
 
