@@ -4,6 +4,9 @@ from comments.models import Comment
 
 
 class CommentSerializer(serializers.ModelSerializer):
+    """
+    Serializer for the Comment model
+    """
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     explorer_id = serializers.ReadOnlyField(source='owner.explorer.id')
@@ -16,9 +19,17 @@ class CommentSerializer(serializers.ModelSerializer):
         return request.user == obj.owner
 
     def get_created_at(self, obj):
+        """ 
+        A method that returns how long ago 
+        a comment was created
+        """
         return naturaltime(obj.created_at)
 
     def get_updated_at(self, obj):
+        """ 
+        A method that returns how long ago 
+        a comment was updated
+        """
         return naturaltime(obj.updated_at)
 
     class Meta:
@@ -31,5 +42,8 @@ class CommentSerializer(serializers.ModelSerializer):
 
 
 class CommentDetailSerializer(CommentSerializer):
-    
+    """
+    Serializer for the Comment model used in Detail view
+    Post is a read only field so that we dont have to set it on each update
+    """    
     post = serializers.ReadOnlyField(source='post.id')
