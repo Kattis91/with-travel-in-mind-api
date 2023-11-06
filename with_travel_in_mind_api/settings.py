@@ -64,7 +64,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = 'DEV' in os.environ
 
 ALLOWED_HOSTS = ['8000-kattis91-withtravelinmi-r3326jxm0dr.ws-eu105.gitpod.io',
-                'localhost', 'with-travel-in-mind-api-a2180400f610.herokuapp.com/']
+                'localhost', 'with-travel-in-mind-api-a2180400f610.herokuapp.com']
 
 
 # Application definition
