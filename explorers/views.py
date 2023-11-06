@@ -1,5 +1,6 @@
 from django.db.models import Count
 from rest_framework import generics, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from with_travel_in_mind_api.permissions import IsOwnerOrReadOnly
 from .models import Explorer
 from .serializers import ExplorerSerializer
@@ -18,7 +19,14 @@ class ExplorerList(generics.ListAPIView):
     ).order_by('-created_at')
     serializer_class = ExplorerSerializer
     filter_backends = [
-        filters.OrderingFilter
+        filters.OrderingFilter,
+        DjangoFilterBackend,
+    ]
+    filterset_fields = [
+        # profiles that are following a profile
+        'owner__following__followed__explorer',
+        # profiles a user is following
+        'owner__followed__owner__explorer',
     ]
     ordering_fields = [
         'posts_count',
