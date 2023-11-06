@@ -5,7 +5,10 @@ from likes.serializers import LikeSerializer
 
 
 class LikeList(generics.ListCreateAPIView):
-    
+    """ 
+    List likes.
+    Make it possible to create a like when logged in.
+    """       
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
     serializer_class = LikeSerializer
     queryset = Like.objects.all()
@@ -15,7 +18,9 @@ class LikeList(generics.ListCreateAPIView):
 
 
 class LikeDetail(generics.RetrieveDestroyAPIView):
-  
+    """
+    Retrieve a like. Delete it if you're the owner.
+    """  
     permission_classes = [IsOwnerOrReadOnly]
     serializer_class = LikeSerializer
     queryset = Like.objects.all()
