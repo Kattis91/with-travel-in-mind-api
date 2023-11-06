@@ -23,9 +23,9 @@ class ExplorerList(generics.ListAPIView):
         DjangoFilterBackend,
     ]
     filterset_fields = [
-        # profiles that are following a profile
+        # explorers that are following an explorer
         'owner__following__followed__explorer',
-        # profiles a user is following
+        # explorers a user is following
         'owner__followed__owner__explorer',
     ]
     ordering_fields = [

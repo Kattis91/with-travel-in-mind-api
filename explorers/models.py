@@ -4,7 +4,11 @@ from django.contrib.auth.models import User
 
 
 class Explorer(models.Model):
-
+    """
+    Model that have one-to-one relationship 
+    to the User model. Extends the information
+    we can get about the user
+    """
     region_choices = (
         ('Asia', 'Asia'),
         ('Africa', 'Africa'),
@@ -23,7 +27,7 @@ class Explorer(models.Model):
     image = models.ImageField(
         upload_to='images/', default='../default_profile_aezplu'
     )
-    region = models.CharField(
+    region_you_would_like_to_explore = models.CharField(
         max_length=50, choices=region_choices, blank=True
     )
     dream_destination = models.TextField(max_length=200, blank=True)
@@ -37,7 +41,7 @@ class Explorer(models.Model):
     
     def create_explorer(sender, instance, created, **kwargs):
         """
-        To make sure that a Explorer profile is created 
+        To make sure that an Explorer profile is created 
         each time a user is created
         """
         if created:
