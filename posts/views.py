@@ -1,5 +1,6 @@
 from django.db.models import Count
 from rest_framework import generics, permissions, filters
+from django_filters.rest_framework import DjangoFilterBackend
 from with_travel_in_mind_api.permissions import IsOwnerOrReadOnly
 from .models import Post
 from .serializers import PostSerializer
@@ -18,12 +19,23 @@ class PostList(generics.ListCreateAPIView):
     ).order_by('-created_at')
     filter_backends = [
         filters.OrderingFilter,
-        filters.SearchFilter
+        filters.SearchFilter,
+        DjangoFilterBackend,
+    ]
+    filterset_fields = [
+        # posts by users a user is following
+        'owner__followed__owner__explorer',
+        # posts a user liked
+        'likes__owner__explorer',
+        # posts a user bookmarked
+        'bookmarks__owner__explorer',
+        # posts owned by a user
+        'owner__explorer',
     ]
     search_fields = [
         'owner__username',
         'title',
-        'country'
+        'country',
     ]
     ordering_fields = [
         'likes_count',
