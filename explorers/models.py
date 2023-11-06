@@ -21,7 +21,7 @@ class Explorer(models.Model):
     name = models.CharField(max_length=100, blank=True)
     bio = models.TextField(max_length=200, blank=True)
     image = models.ImageField(
-        upload_to='images/', default='../default_profile_uplei1'
+        upload_to='images/', default='../default_profile_aezplu'
     )
     region = models.CharField(
         max_length=50, choices=region_choices, blank=True
