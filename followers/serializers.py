@@ -12,7 +12,7 @@ class FollowerSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'created_at', 'followed', 'followed_name'
         ]
-   
+
     def create(self, validated_data):
         try:
             return super().create(validated_data)
@@ -20,5 +20,3 @@ class FollowerSerializer(serializers.ModelSerializer):
             raise serializers.ValidationError({
                 'detail': 'possible duplicate'
             })
-
-    
