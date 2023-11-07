@@ -220,3 +220,16 @@
   ````
   ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
   ````
+
+### Ensure the project requirements.txt file is up to date.
+  
+  ````
+  pip freeze --local > requirements.txt
+  ````
+
+### Create a Procfile
+
+  ````
+  release: python manage.py makemigrations && python manage.py migrate
+  web: gunicorn with_travel_in_mind_api.wsgi
+  ````
