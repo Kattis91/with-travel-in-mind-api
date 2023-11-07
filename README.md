@@ -76,6 +76,52 @@
 - [sqlparse](https://pypi.org/project/sqlparse/)
   - A non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
 
+## Database Diagram
+
+The database model diagram was designed using [Lucidchart](https://www.lucidchart.com/pages/sv).
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699365141/database_diagram_i4npl4.png)
+
+### Explorer Model
+
+- The model has a one-to-one relationship with the Django User model. This means that for every User that signs up to the website, there will be a corresponding Explorer model which is used to define some additional values relative to the user. 
+
+- Is based on the "Django REST Framework" walkthrough project. 
+
+  Some adjustments and additions were made to fit the needs of my project:
+  - The `content` field has been renamed to `bio`.
+  - New fields added:
+    - `region_you_would_like_to_explore` (an explorer can choose among 7 region, the field is _optional_)
+    - `dream_destination`(the field is _optional_).
+
+### Post Model
+
+- The model represents the posts made by users. 
+
+- Keeps track of the times when each post was created and last updated.
+
+- Is based on the "Django REST Framework" walkthrough project. 
+
+  Some adjustments and additions were made to fit the needs of my project:
+  - The `content` field has been renamed to `description`.
+  - New field added:
+    - `country` (Explorers can specify the country represented in the image for this travel project. The field is _optional_).
+
+### Comment Model
+
+- Enables the user to create a comment.
+
+- Keeps track of the times when each comment was created and last updated.
+
+- Is based on the "Django REST Framework" walkthrough project. 
+
+- The `content` field has been renamed to `comment`.
+
+### Like Model
+
+- The model represents the likes given by users to a post.
+
+- Is based on the "Django REST Framework" walkthrough project.
 
 ## Deployment
 
