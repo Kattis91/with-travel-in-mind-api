@@ -154,3 +154,69 @@
   - **SECRET_KEY**: `os.environ["SECRET_KEY"] = "randomSecretKey"` ([Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate a secret key).
   - **DEV**: `'1'`.
   - **CLOUDINARY_URL** with the value copied from the dashboard (remove `CLOUDINARY_URL` in the beginning).
+
+### Update settings.py
+
+- Add the following code:
+
+  ````
+  import dj_database_url
+  ````
+
+- Remove the insecure secret key provided by Django. Change your SECRET_KEY variable to the following: `SECRET_KEY = os.environ.get('SECRET_KEY')`
+
+- Separate the development and production databases by replacing the **DATABASES** variable with the following code:
+
+  ````
+  if 'DEV' in os.environ:
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.sqlite3',
+              'NAME': BASE_DIR / 'db.sqlite3',
+          }
+      }
+  else:
+      DATABASES = {
+          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+      }
+  ````
+
+- Add **corsheaders** into **INSTALLED_APPS**:
+  
+  ````
+  INSTALLED_APPS = [
+    ...
+    'dj_rest_auth.registration',
+    'corsheaders',
+    ...
+  ]
+  ````
+
+- Add **corsheaders middleware** to the TOP of the MIDDLEWARE.
+
+- Add the following code to allow network requests made to the server: 
+
+  ````
+  if 'CLIENT_ORIGIN' in os.environ:
+      CORS_ALLOWED_ORIGINS = [
+          os.environ.get('CLIENT_ORIGIN')
+      ]
+  else:
+      CORS_ALLOWED_ORIGIN_REGEXES = [
+          r"^https://.*\.gitpod\.io$",
+      ]
+  ````
+
+- Add the following code to allow cookies: `CORS_ALLOW_CREDENTIALS = True`
+
+- To be able to have the front end app and the API deployed to different platforms, set the **JWT_AUTH_SAMESITE** attribute to **'None'**. 
+
+- Set the DEBUG value to be **True only if the DEV environment variable exists**:
+
+  `DEBUG = 'DEV' in os.environ`
+
+- Add Heroku Hostname to ALLOWED_HOSTS
+
+  ````
+  ALLOWED_HOSTS = ['app-name.herokuapp.com', 'localhost']
+  ````
