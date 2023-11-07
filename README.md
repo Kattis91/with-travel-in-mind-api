@@ -105,3 +105,52 @@
  - Click the **"Create a new app"** button.
 
  - Give your app a name and select the region closest to you. _A name must be **unique**._
+
+### Install libraries
+
+- Install **Gunicorn**(the server that is used to run Django on Heroku): `pip3 install gunicorn django-cors-headers`
+
+- Install **dj_database_url** and **pyscopg2**(connect to PostegreSQL): `pip3 install dj_database_url pyscopg2`
+
+- Install **Cloudinary** (The cloud platform used to store media files): `pip3 install dj3-cloudinary-storage`
+
+### Get images stored on Cloudinary
+
+- Create a Cloudinary account (steps can be found in the [Code Institutes](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/9236975633b64a12a61a00e0cca7c47d/?child=first) tutorial in LMS).
+
+- **settings.py**:
+
+  - Add Cloudinary Libraries to installed apps (the order is important):
+
+    ````
+    INSTALLED_APPS = [
+      ...,
+      'cloudinary_storage',
+      'django.contrib.staticfiles',
+      'cloudinary',
+      ...,
+    ]
+    ````
+  
+  - Add following just below imports and `if os.path.exists`:
+   
+    ````
+    CLOUDINARY_STORAGE = {
+        'CLOUDINARY_URL': os.environ.get('CLOUDINARY_URL')
+    }
+
+    MEDIA_URL = '/media/'
+    DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+    ````
+
+### Create an env.py file
+
+- Create **env.py** file and check that the file is included in the **.gitignore file**.
+
+- Import os library: `import os`.
+
+- Set environment variables:
+  - **DATABASE_URL** with the value you just copied from ElephantSQL: `os.environ["DATABASE_URL"]="<copiedURL>`
+  - **SECRET_KEY**: `os.environ["SECRET_KEY"] = "randomSecretKey"` ([Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate a secret key).
+  - **DEV**: `'1'`.
+  - **CLOUDINARY_URL** with the value copied from the dashboard (remove `CLOUDINARY_URL` in the beginning).
