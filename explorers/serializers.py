@@ -3,6 +3,7 @@ from .models import Explorer
 from followers.models import Follower
 from favourites.models import Favourite
 
+
 class ExplorerSerializer(serializers.ModelSerializer):
     """
     Serializer for the Explorer model
@@ -26,10 +27,10 @@ class ExplorerSerializer(serializers.ModelSerializer):
 
     def get_following_id(self, obj):
         """
-        Method to display the following_id (the same id as 
-        the newly created Follower instance) in order to know 
+        Method to display the following_id (the same id as
+        the newly created Follower instance) in order to know
         which Follower instance to delete when unfollowing
-        """      
+        """
         user = self.context['request'].user
         if user.is_authenticated:
             following = Follower.objects.filter(
@@ -41,7 +42,7 @@ class ExplorerSerializer(serializers.ModelSerializer):
     def get_favoriting_id(self, obj):
         """
         Method to display the favoriting_id (the same id as
-        the newly created Favourite instance) in order to know 
+        the newly created Favourite instance) in order to know
         which Favourite instance to delete when 'unfavoriting'
         """
         user = self.context['request'].user
@@ -56,8 +57,8 @@ class ExplorerSerializer(serializers.ModelSerializer):
         model = Explorer
         fields = [
             'id', 'owner', 'created_at', 'updated_at', 'name',
-            'bio', 'image', 'region_you_would_like_to_explore', 
-            'dream_destination', 'is_owner','following_id', 
-            'favoriting_id', 'posts_count', 'followers_count', 
-            'following_count','favourites_count','favoriting_count',
+            'bio', 'image', 'region_you_would_like_to_explore',
+            'dream_destination', 'is_owner', 'following_id',
+            'favoriting_id', 'posts_count', 'followers_count',
+            'following_count', 'favourites_count', 'favoriting_count',
         ]

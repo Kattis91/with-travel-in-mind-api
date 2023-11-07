@@ -5,7 +5,7 @@ from django.contrib.auth.models import User
 
 class Explorer(models.Model):
     """
-    Model that have one-to-one relationship 
+    Model that have one-to-one relationship
     to the User model. Extends the information
     we can get about the user
     """
@@ -37,15 +37,15 @@ class Explorer(models.Model):
 
     def __str__(self):
         return f"Explorer: {self.owner}"
-    
-    
+
     def create_explorer(sender, instance, created, **kwargs):
         """
-        To make sure that an Explorer profile is created 
+        To make sure that an Explorer profile is created
         each time a user is created
         """
         if created:
             Explorer.objects.create(owner=instance)
-    
+
     post_save.connect(create_explorer, sender=User)
+
 

@@ -5,6 +5,7 @@ from with_travel_in_mind_api.permissions import IsOwnerOrReadOnly
 from .models import Explorer
 from .serializers import ExplorerSerializer
 
+
 class ExplorerList(generics.ListAPIView):
     """
     List all explorers
