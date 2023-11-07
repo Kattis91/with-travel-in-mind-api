@@ -241,6 +241,18 @@ Minor indentation, trailing whitespace and no new line/blank line at end of file
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697580394/static/images/ci_python_linter.286469fc4bb0.png)
 
+## Credits
+
+### Content
+
+- The main code of this project is based on the tutorial "Django REST Framework" by Code Institute. The project was expanded with custom models and functionality to suit my needs. To better understand the subject and challenge myself, I chose to write views for Explorer and Post, which were later refactored to generic views.
+
+- Inspiration to my two custom models ("Bookmark" and "Favourite") was taken from [Instagram](https://www.instagram.com/).
+
+- [Django REST Framework Documentation](https://www.django-rest-framework.org/) was used throughout the project to gain more knowledge about different concepts.
+
+- [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate Django Secret Key.
+
 ## Deployment
 
 ### Create Heroku App
