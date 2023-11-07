@@ -79,6 +79,14 @@
 
 ## Deployment
 
+### Create Heroku App
+
+ - Sign up for Heroku and accept terms of service.
+
+ - Click the **"Create a new app"** button.
+
+ - Give your app a name and select the region closest to you. _A name must be **unique**._
+
 ### Create a new external database
 
 - Navigate to **ElephantSQL.com** and click **“Get a managed database today”**.
@@ -98,19 +106,48 @@
 
 - Copy the database URL.The URL starts with **postgres://**
 
-### Create Heroku App
+#### Connect to external database:
 
- - Sign up for Heroku and accept terms of service.
+- Install **dj_database_url** and **pyscopg2**(connect to PostgreSQL): `pip3 install dj_database_url pyscopg2`
 
- - Click the **"Create a new app"** button.
+- Add the following import in **settings.py**:
 
- - Give your app a name and select the region closest to you. _A name must be **unique**._
+  ````
+  import dj_database_url
+  ````
+- Separate the development and production databases by replacing the **DATABASES** variable with the following code:
 
-### Install libraries
+  ````
+  if 'DEV' in os.environ:
+      DATABASES = {
+          'default': {
+              'ENGINE': 'django.db.backends.sqlite3',
+              'NAME': BASE_DIR / 'db.sqlite3',
+          }
+      }
+  else:
+      DATABASES = {
+          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
+      }
+  ````
+
+- Add the following environment variable in **env.py**:
+  - **DATABASE_URL** with the value you copied from ElephantSQL: `os.environ["DATABASE_URL"]="<copiedURL>`
+
+- Add a print statement to the DATABASES section above to confirm you have connected to the external database (Run `python3 manage.py makemigrations --dry-run`). Delete the print statement.
+
+- Save all files and make migrations: `python3 manage.py migrate`
+
+- Create a superuser for your new database: `python3 manage.py createsuperuser`
+
+- Confirm that the data in your database on ElephantSQL has been created: 
+  - On the ElephantSQL page for your database, in the left side navigation, select **“BROWSER”**.
+  - Click the **Table queries** button, select **auth_user**.
+  - When you click **“Execute”**, you should see your newly created superuser details displayed. This confirms your tables have been created and you can add data to your database.
+
+### Install more libraries
 
 - Install **Gunicorn**(the server that is used to run Django on Heroku): `pip3 install gunicorn django-cors-headers`
-
-- Install **dj_database_url** and **pyscopg2**(connect to PostegreSQL): `pip3 install dj_database_url pyscopg2`
 
 - Install **Cloudinary** (The cloud platform used to store media files): `pip3 install dj3-cloudinary-storage`
 
@@ -150,36 +187,13 @@
 - Import os library: `import os`.
 
 - Set environment variables:
-  - **DATABASE_URL** with the value you just copied from ElephantSQL: `os.environ["DATABASE_URL"]="<copiedURL>`
   - **SECRET_KEY**: `os.environ["SECRET_KEY"] = "randomSecretKey"` ([Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate a secret key).
   - **DEV**: `'1'`.
   - **CLOUDINARY_URL** with the value copied from the dashboard (remove `CLOUDINARY_URL` in the beginning).
 
 ### Update settings.py
 
-- Add the following code:
-
-  ````
-  import dj_database_url
-  ````
-
 - Remove the insecure secret key provided by Django. Change your SECRET_KEY variable to the following: `SECRET_KEY = os.environ.get('SECRET_KEY')`
-
-- Separate the development and production databases by replacing the **DATABASES** variable with the following code:
-
-  ````
-  if 'DEV' in os.environ:
-      DATABASES = {
-          'default': {
-              'ENGINE': 'django.db.backends.sqlite3',
-              'NAME': BASE_DIR / 'db.sqlite3',
-          }
-      }
-  else:
-      DATABASES = {
-          'default': dj_database_url.parse(os.environ.get("DATABASE_URL"))
-      }
-  ````
 
 - Add **corsheaders** into **INSTALLED_APPS**:
   
@@ -233,3 +247,25 @@
   release: python manage.py makemigrations && python manage.py migrate
   web: gunicorn with_travel_in_mind_api.wsgi
   ````
+
+### Go back to Heroku
+
+- Go the Heroku dashboard and open the **Settings** tab:
+
+- Ensure that following _Config Vars_ are added:
+  - KEY: **SECRET_KEY** | VALUE: **randomSecretKey**(the value that is in env.py)
+  - KEY: **DATABASE_URL** | VALUE: **ElephantSQL database url**(no quotation marks needed)
+  - KEY: **DISABLE_COLLECTSTATIC** | VALUE: **1** (Temporary to be able to deploy the project as we do not have any static files yet)
+  - KEY **CLOUDINARY_URL** | VALUE: **API Environment Variable** copied in the Cloudinary dashboard.
+
+- Click on the **"Deploy"** section on the top of the page.
+
+- Select **GitHub** as deployment method and click the **"Connect to GitHub"** button.
+
+- Search for the repository for this project, _with_travel_in_mind_api_. 
+
+- Click **"Connect"** to link up Heroku app to the GitHub repository.
+
+- Click on **"Deploy Branch"**.
+
+- **Optional**: Click the **"Enable Automatic Deploys"** button to make it possible for Heroku to rebuild the app a new change is pushed to GitHub repository.
