@@ -5,7 +5,7 @@ from rest_framework import serializers
 class CurrentUserSerializer(UserDetailsSerializer):
     """
     Serializer for the CurrentUser.
-    Extends the UserDetailsSerializer from 'dj_rest_auth' 
+    Extends the UserDetailsSerializer from 'dj_rest_auth'
     to include 'explorer_id' and 'explorer_image' fields.
     """
     explorer_id = serializers.ReadOnlyField(source='explorer.id')
