@@ -123,6 +123,34 @@ The database model diagram was designed using [Lucidchart](https://www.lucidchar
 
 - Is based on the "Django REST Framework" walkthrough project.
 
+### Follower Model 
+
+- The model related to 'owner' and 'followed'.
+    - 'owner' is a User that is following a User.
+    - 'followed' is a User that is followed by 'owner'.
+  
+- **'unique_together'** makes sure a user can't 'double follow' the same user.
+
+- Is based on the "Django REST Framework" walkthrough project.
+
+### Bookmark Model
+
+- The custom model.
+
+- The model represents the list of posts that a user wants to keep track of. 
+
+- **'unique_together'** makes sure a user can't 'double bookmark' the same post. 
+
+### Favourite Model 
+
+- The custom model.
+
+- The model related to 'owner' and 'favorited'.
+    - 'owner' is a User that is favoriting a User.
+    - 'favorited' is a User that is favorited by 'owner'.
+
+- **'unique_together'** makes sure a user can't 'double favorite' the same user.
+
 ## Deployment
 
 ### Create Heroku App
