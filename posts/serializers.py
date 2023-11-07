@@ -8,7 +8,8 @@ class PostSerializer(serializers.ModelSerializer):
     owner = serializers.ReadOnlyField(source='owner.username')
     is_owner = serializers.SerializerMethodField()
     explorer_id = serializers.ReadOnlyField(source='owner.explorer.id')
-    explorer_image = serializers.ReadOnlyField(source='owner.explorer.image.url')
+    explorer_image = serializers.ReadOnlyField(
+        source='owner.explorer.image.url')
     like_id = serializers.SerializerMethodField()
     likes_count = serializers.ReadOnlyField()
     bookmark_id = serializers.SerializerMethodField()
@@ -33,11 +34,10 @@ class PostSerializer(serializers.ModelSerializer):
 
     def get_is_owner(self, obj):
         request = self.context['request']
-        return request.user == obj.owner
-        
+
     def get_like_id(self, obj):
         """
-        Method to let us know if the current user 
+        Method to let us know if the current user
         has already liked a post
         """
         user = self.context['request'].user
@@ -50,7 +50,7 @@ class PostSerializer(serializers.ModelSerializer):
 
     def get_bookmark_id(self, obj):
         """
-        Method to let us know if the current user 
+        Method to let us know if the current user
         has already bookmarked a post
         """
         user = self.context['request'].user
@@ -67,6 +67,6 @@ class PostSerializer(serializers.ModelSerializer):
             'id', 'owner', 'is_owner', 'explorer_id',
             'explorer_image', 'created_at', 'updated_at',
             'title', 'description', 'image', 'country',
-            'like_id', 'likes_count', 'bookmark_id', 
+            'like_id', 'likes_count', 'bookmark_id',
             'bookmarks_count', 'comments_count'
         ]
