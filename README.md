@@ -77,3 +77,31 @@
   - A non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
 
 
+## Deployment
+
+### Create a new external database
+
+- Navigate to **ElephantSQL.com** and click **“Get a managed database today”**.
+
+- Click **Create New Instance**.
+
+- Set up your plan:
+  - give your plan a Name;
+  - select the Tiny Turtle (Free) plan.
+  - the tags field can be left blank.
+
+- Click **“Select Region”** and select a data center near you.
+
+- Click **"Review"**, check that your details are correct and click **“Create instance”**.
+
+- Return to the dashboard and click on the database instance name for this project.
+
+- Copy the database URL.The URL starts with **postgres://**
+
+### Create Heroku App
+
+ - Sign up for Heroku and accept terms of service.
+
+ - Click the **"Create a new app"** button.
+
+ - Give your app a name and select the region closest to you. _A name must be **unique**._
