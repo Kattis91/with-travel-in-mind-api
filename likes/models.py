@@ -19,4 +19,3 @@ class Like(models.Model):
     def __str__(self):
         if self.post:
             return f'{self.owner} {self.post}'
-
