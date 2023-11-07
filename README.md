@@ -155,6 +155,92 @@ The database model diagram was designed using [Lucidchart](https://www.lucidchar
 
 - **'unique_together'** makes sure a user can't 'double favorite' the same user.
 
+## Testing
+
+### Validator Testing
+
+**Validator**: [CI Python Linter](https://pep8ci.herokuapp.com/)
+
+Only files with custom-written Python code have been verified with the validator. 
+
+<details>
+<summary>with_travel_in_mind_api</summary>
+  
+- permissions.py
+- serializers.py
+- settings.py
+- views.py
+- urls.py
+</details>
+
+<details>
+<summary>explorers</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+- admin.py
+</details>
+
+<details>
+<summary>posts</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+</details>
+
+<details>
+<summary>comments</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+</details>
+
+<details>
+<summary>likes</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+</details>
+
+<details>
+<summary>followers</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+</details>
+
+<details>
+<summary>bookmarks</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+</details>
+
+<details>
+<summary>favourites</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+</details>
+
+Minor indentation, trailing whitespace and no new line/blank line at end of file errors were corrected. No known errors are now present. All the files tested got the result below.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697580394/static/images/ci_python_linter.286469fc4bb0.png)
+
 ## Deployment
 
 ### Create Heroku App
