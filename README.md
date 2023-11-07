@@ -478,3 +478,32 @@ Minor indentation, trailing whitespace and no new line/blank line at end of file
 - **Git add, commit and push** the changes to your settings.py file to GitHub.
 
 - Go to Heroku. Click on the **"Deploy"** section on the top of the page. Click on **"Deploy Branch"**.
+
+## Development 
+
+## Fork
+
+- Log in to **GitHub** and find the repository for this project, [_Kattis91/with_travel_in_mind_api_](https://github.com/Kattis91/with-travel-in-mind-api).
+
+- In the top-right corner of the page, click **Fork**.
+
+- Type some new name into the "Repository name" field to distinguish your fork from the upstream repository.
+
+- Click **Create Fork**.
+
+- The fork is now in your personal account and can be changed in the way you want.
+
+## Clone
+
+- On **GitHub**, navigate to your fork of the _Kattis91/with_travel_in_mind_api_ repository.
+
+- Above the list of files, click **<>Code**.
+
+- Copy the **URL** for the repository. Repository can be cloned in three different ways:
+  - **HTTPS**;
+  - **SSH**;
+  - **GitHub CLI**.
+
+- Open Terminal and change the current working directory to the location where you want the cloned directory.
+
+- Type `git clone`, and paste the URL you copied earlier. Press **Enter**
