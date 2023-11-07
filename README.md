@@ -269,3 +269,48 @@
 - Click on **"Deploy Branch"**.
 
 - **Optional**: Click the **"Enable Automatic Deploys"** button to make it possible for Heroku to rebuild the app a new change is pushed to GitHub repository.
+
+### Make some changes in order to use this API with the upcoming Front End project.
+
+- **Adding ALLOWED_HOSTS**:
+
+  - Add the following to the _Config_Vars_ on **Heroku**:
+
+    `KEY **ALLOWED_HOST** | VALUE: **'app-name.herokuapp.com'**`
+
+  - Update ALLOWED_HOSTS to in the **settings.py**:
+
+    `ALLOWED_HOSTS = ['localhost', os.environ.get('ALLOWED_HOST')]`
+
+- **Adding CLIENT_ORIGIN_DEV**:
+
+  - Using GitPod:
+   
+    - `import re` in the top of settings.py
+
+    - Replace the else statement and body for **if 'CLIENT_ORIGIN' in os.environ:** with the following code:
+
+      ````
+      if 'CLIENT_ORIGIN_DEV' in os.environ:
+          extracted_url = re.match(r'^.+-', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE).group(0)
+          CORS_ALLOWED_ORIGIN_REGEXES = [
+              rf"{extracted_url}(eu|us)\d+\w\.gitpod\.io$",
+          ]
+      ````
+  - Using Codeanywhere:
+   
+    - `import re` in the top of settings.py
+
+    - Replace the else statement and body for **if 'CLIENT_ORIGIN' in os.environ:** with the following code:
+
+      ````
+      if 'CLIENT_ORIGIN_DEV' in os.environ:
+          extracted_url = re.match(r'^([^.]+)', os.environ.get('CLIENT_ORIGIN_DEV', ''), re.IGNORECASE).group(0)
+
+          CORS_ALLOWED_ORIGIN_REGEXES = [
+              rf"{extracted_url}.(eu|us)\d+\.codeanyapp\.com$",
+          ]
+      ````
+- **Git add, commit and push** the changes to your settings.py file to GitHub.
+
+- Go to Heroku. Click on the **"Deploy"** section on the top of the page. Click on **"Deploy Branch"**.
