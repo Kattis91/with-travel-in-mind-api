@@ -28,16 +28,17 @@ class PostListViewTests(APITestCase):
 
 class PostDetailViewTests(APITestCase):
     def setUp(self):
-        kattis = User.objects.create_user(username='kattis', password='pass1234')
+        kattis = User.objects.create_user(
+            username='kattis', password='pass1234')
         misha = User.objects.create_user(username='misha', password='pass1234')
         Post.objects.create(
-            owner=kattis, 
-            title='My test post', 
+            owner=kattis,
+            title='My test post',
             description='kattis first post'
         )
         Post.objects.create(
-            owner=misha, 
-            title='My first post', 
+            owner=misha,
+            title='My first post',
             description='mishas first post'
         )
 
