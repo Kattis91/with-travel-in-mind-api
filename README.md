@@ -251,6 +251,35 @@ Result:
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699391307/automated_testing_tpvfli.png)
 
+<details>
+<summary>PostListViewTests</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699392677/post_list_test_views_es2bnf.png)
+
+</details>
+
+<details>
+<summary>PostDetailViewTests</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699392919/post_detail_view_tests_1_rm3wsc.png)
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699392919/post_detail_view_tests_2_tpti8d.png)
+
+</details>
+
+<details>
+<summary>ExplorerListViewTests</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699393277/explorer_list_view_tests_idxh6x.png)
+
+</details>
+
+<details>
+<summary>ExplorerDetailViewTests</summary>
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699393277/explorer_detail_view_tests_y5uehc.png)
+
+</details>
+
 ## Credits
 
 ### Content
