@@ -181,6 +181,7 @@ Only files with custom-written Python code have been verified with the validator
 - views.py
 - urls.py
 - admin.py
+- tests.py
 </details>
 
 <details>
@@ -190,6 +191,7 @@ Only files with custom-written Python code have been verified with the validator
 - serializers.py
 - views.py
 - urls.py
+- tests.py
 </details>
 
 <details>
