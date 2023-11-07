@@ -121,6 +121,8 @@ The database model diagram was designed using [Lucidchart](https://www.lucidchar
 
 - The model represents the likes given by users to a post.
 
+- **'unique_together'** makes sure a user can't like the same post twice.
+
 - Is based on the "Django REST Framework" walkthrough project.
 
 ### Follower Model 
@@ -144,6 +146,8 @@ The database model diagram was designed using [Lucidchart](https://www.lucidchar
 ### Favourite Model 
 
 - The custom model.
+
+- The model enables user to add other users to "favourites".
 
 - The model related to 'owner' and 'favorited'.
     - 'owner' is a User that is favoriting a User.
