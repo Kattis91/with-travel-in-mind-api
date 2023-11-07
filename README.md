@@ -241,6 +241,14 @@ Minor indentation, trailing whitespace and no new line/blank line at end of file
 
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1697580394/static/images/ci_python_linter.286469fc4bb0.png)
 
+### Automated testing
+
+Automated tests were created and run on the With Travel In Mind API to test basic CRUD functionality and user permissions for the Post and Explorer models. 
+
+Result: 
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699391307/automated_testing_tpvfli.png)
+
 ## Credits
 
 ### Content
