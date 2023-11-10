@@ -465,7 +465,7 @@ Result:
 
 ### Go back to Heroku
 
-- Go the Heroku dashboard and open the **Settings** tab:
+- Go to the Heroku dashboard and open the **Settings** tab:
 
 - Ensure that following _Config Vars_ are added:
   - KEY: **SECRET_KEY** | VALUE: **randomSecretKey**(the value that is in env.py)
@@ -529,6 +529,15 @@ Result:
 - **Git add, commit and push** the changes to your settings.py file to GitHub.
 
 - Go to Heroku. Click on the **"Deploy"** section on the top of the page. Click on **"Deploy Branch"**.
+
+### Tell the API to accept request from the React project.
+
+- Go to the Heroku dashboard and open the **Settings** tab:
+
+- Add following _Config_Vars_:
+  
+  - KEY: `CLIENT_ORIGIN` | VALUE: `app-name.herokuapp.com` (The deployed React project)
+  - KEY: `CLIENT_ORIGIN_DEV` | VALUE: `3000-kattis91-app-name.gitpod.io` (Gitpod Preview link)
 
 ## Development 
 
