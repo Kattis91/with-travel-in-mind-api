@@ -26,6 +26,8 @@ class PostList(generics.ListCreateAPIView):
     filterset_fields = [
         # posts by users a user is following
         'owner__followed__owner__explorer',
+        # posts by users a user has on the favorite list
+        'owner__favorited__owner__explorer',
         # posts a user liked
         'likes__owner__explorer',
         # posts a user bookmarked
