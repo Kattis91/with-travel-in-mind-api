@@ -67,7 +67,7 @@ class PostSerializer(serializers.ModelSerializer):
         fields = [
             'id', 'owner', 'is_owner', 'explorer_id',
             'explorer_image', 'created_at', 'updated_at',
-            'title', 'description', 'image', 'country',
-            'like_id', 'likes_count', 'bookmark_id',
+            'title', 'description', 'image', 'place',
+            'region', 'like_id', 'likes_count', 'bookmark_id',
             'bookmarks_count', 'comments_count'
         ]
