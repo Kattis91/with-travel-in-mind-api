@@ -34,11 +34,13 @@ class PostList(generics.ListCreateAPIView):
         'bookmarks__owner__explorer',
         # posts owned by a user
         'owner__explorer',
+        # to sort posts by a region
+        'region'
     ]
     search_fields = [
         'owner__username',
         'title',
-        'country',
+        'place',
     ]
     ordering_fields = [
         'likes_count',
