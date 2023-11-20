@@ -192,6 +192,7 @@ Only files with custom-written Python code have been verified with the validator
 - views.py
 - urls.py
 - tests.py
+- admin.py
 </details>
 
 <details>
@@ -201,6 +202,7 @@ Only files with custom-written Python code have been verified with the validator
 - serializers.py
 - views.py
 - urls.py
+- admin.py
 </details>
 
 <details>
@@ -210,6 +212,7 @@ Only files with custom-written Python code have been verified with the validator
 - serializers.py
 - views.py
 - urls.py
+- admin.py
 </details>
 
 <details>
@@ -219,6 +222,7 @@ Only files with custom-written Python code have been verified with the validator
 - serializers.py
 - views.py
 - urls.py
+- admin.py
 </details>
 
 <details>
@@ -228,6 +232,7 @@ Only files with custom-written Python code have been verified with the validator
 - serializers.py
 - views.py
 - urls.py
+- admin.py
 </details>
 
 <details>
@@ -237,6 +242,17 @@ Only files with custom-written Python code have been verified with the validator
 - serializers.py
 - views.py
 - urls.py
+- admin.py
+</details>
+
+<details>
+<summary>commentlikes</summary>
+  
+- models.py
+- serializers.py
+- views.py
+- urls.py
+- admin.py
 </details>
 
 Minor indentation, trailing whitespace and no new line/blank line at end of file errors were corrected. No known errors are now present. All the files tested got the result below.
