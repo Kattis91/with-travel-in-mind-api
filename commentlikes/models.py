@@ -10,7 +10,8 @@ class CommentLike(models.Model):
     """
     owner = models.ForeignKey(User, on_delete=models.CASCADE)
     comment = models.ForeignKey(
-        Comment, related_name='commentlikes', on_delete=models.CASCADE, null=True)
+        Comment, related_name='commentlikes',
+        on_delete=models.CASCADE, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     class Meta:
