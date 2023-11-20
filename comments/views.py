@@ -1,3 +1,4 @@
+from django.db.models import Count
 from rest_framework import generics, permissions
 from django_filters.rest_framework import DjangoFilterBackend
 from with_travel_in_mind_api.permissions import IsOwnerOrReadOnly
@@ -12,7 +13,9 @@ class CommentList(generics.ListCreateAPIView):
     """
     serializer_class = CommentSerializer
     permission_classes = [permissions.IsAuthenticatedOrReadOnly]
-    queryset = Comment.objects.all()
+    queryset = Comment.objects.annotate(
+        commentlikes_count=Count('commentlikes', distinct=True)
+    ).order_by('created_at')
 
     filter_backends = [
         DjangoFilterBackend
