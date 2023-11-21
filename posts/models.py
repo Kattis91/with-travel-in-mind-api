@@ -27,7 +27,7 @@ class Post(models.Model):
     )
     place = models.CharField(max_length=100, blank=False)
     region = models.CharField(
-        max_length=50, choices=REGION_CHOICES, default='', blank=False
+        max_length=50, choices=REGION_CHOICES, default='Europe', blank=False
     )
 
     class Meta:
