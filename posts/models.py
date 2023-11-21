@@ -21,9 +21,9 @@ class Post(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     title = models.CharField(max_length=200)
-    description = models.TextField(blank=True)
+    description = models.TextField(blank=False)
     image = models.ImageField(
-        upload_to='images/', default='../default_image_hsxgdj', blank=True
+        upload_to='images/', default='../default_image_hsxgdj', blank=False
     )
     place = models.CharField(max_length=100, blank=True)
     region = models.CharField(
