@@ -23,7 +23,7 @@ class Explorer(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     name = models.CharField(max_length=100, blank=True)
-    bio = models.TextField(max_length=200, blank=True)
+    bio = models.TextField(max_length=300, blank=True)
     image = models.ImageField(
         upload_to='images/', default='../default_profile_aezplu'
     )
