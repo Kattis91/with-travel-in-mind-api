@@ -80,7 +80,14 @@
 
 The database model diagram was designed using [Lucidchart](https://www.lucidchart.com/pages/sv).
 
+The initial plan was developed during the project. There have been some changes made to a few fields and a new model, CommentLike, has been implemented.
+
+![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1700780451/Database_Diagram_futqfk.png)
+
+<details><summary>Click here to see the origin database diagram</summary>
+
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699365141/database_diagram_i4npl4.png)
+</details>
 
 ### Explorer Model
 
@@ -88,7 +95,7 @@ The database model diagram was designed using [Lucidchart](https://www.lucidchar
 
 - Is based on the "Django REST Framework" walkthrough project. 
 
-  Some adjustments and additions were made to fit the needs of my project:
+- Some adjustments and additions were made to fit the needs of my project:
   - The `content` field has been renamed to `bio`.
   - New fields added:
     - `region_you_would_like_to_explore` (an explorer can choose among 7 region, the field is _optional_)
@@ -102,10 +109,11 @@ The database model diagram was designed using [Lucidchart](https://www.lucidchar
 
 - Is based on the "Django REST Framework" walkthrough project. 
 
-  Some adjustments and additions were made to fit the needs of my project:
+- Some adjustments and additions were made to fit the needs of my project:
   - The `content` field has been renamed to `description`.
-  - New field added:
-    - `country` (Explorers can specify the country represented in the image for this travel project. The field is _optional_).
+  - New fields added:
+    - `place` (Explorers can specify the country represented in the image for this travel project).
+    - `region` (Explorers can choose among 7 regions).
 
 ### Comment Model
 
@@ -154,6 +162,14 @@ The database model diagram was designed using [Lucidchart](https://www.lucidchar
     - 'favorited' is a User that is favorited by 'owner'.
 
 - **'unique_together'** makes sure a user can't 'double favorite' the same user.
+
+### CommentLike Model
+
+- The custom model.
+
+- The model represents the likes given by users to a comment.
+
+- **'unique_together'** makes sure a user can't like the same comment twice.
 
 ## Testing
 
