@@ -1,5 +1,7 @@
 # With Travel in Mind
 
+"With Travel In Mind" is an online application designed to foster a community of travelers who share their experiences and knowledge about various destinations. The platform allows users to interact with each other by following, adding to favorites, commenting, bookmarking, and liking posts and comments. Whether you're a seasoned traveler or a novice explorer, With Travel In Mind is the perfect platform to connect with like-minded wanderers and discover new destinations.
+
 # Table of Contents
 
 - [Technologies Used](#technologies-used)
@@ -22,7 +24,8 @@
     - [CommentLikes](#commentlikes)
 
   - [Credits](#credits)
-    - [Contents](#contents)
+    - [Media](#media)
+    - [Content](#content)
 
   - [Deployment](#deployment)
 
@@ -520,6 +523,14 @@ Result:
 [Back to top ⇧](#table-of-contents)
 
 ## Credits
+
+### Media
+
+- The default post placeholder image was borrowed from the "Moments" walkthrough projekt.
+
+- The default explorer placeholder image was borrowed from the "Moments" walkthrough projekt.
+
+- [Lucidchart](https://www.lucidchart.com/pages/sv) was used to create Database Diagram.
 
 ### Content
 
