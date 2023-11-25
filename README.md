@@ -272,6 +272,24 @@ The initial plan was developed during the project. There have been some changes 
 |---------------|--------|
 |	Only authenticated owners can delete their own bookmarks | :white_check_mark: |
 
+#### /followers
+
+| Feature | Status |
+|---------------|--------|
+|	Correct URL path |
+|	Follow functionality available for ONLY logged-in users |
+|	Correct follow fields |
+| Correct owner is displayed |
+|	Correct followed_name is displayed |
+| Correct follow id is generated
+
+#### /followers/id
+
+| Feature | Status |
+|---------------|--------|
+|	Only authenticated owners can unfollow other users | :white_check_mark: |
+
+
 ## Testing
 
 ### Validator Testing
