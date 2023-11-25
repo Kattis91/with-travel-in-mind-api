@@ -29,7 +29,7 @@
   - [Development](#development)
     - [Fork](#fork)
     - [Clone](#clone)
-    
+
 ## Technologies Used
 
 ### Languages
@@ -105,6 +105,8 @@
 
 - [sqlparse](https://pypi.org/project/sqlparse/)
   - A non-validating SQL parser for Python. It provides support for parsing, splitting and formatting SQL statements.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Database Diagram
 
@@ -200,6 +202,8 @@ The initial plan was developed during the project. There have been some changes 
 - The model represents the likes given by users to a comment.
 
 - **'unique_together'** makes sure a user can't like the same comment twice.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Testing
 
@@ -341,6 +345,8 @@ Result:
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699393277/explorer_detail_view_tests_y5uehc.png)
 
 </details>
+
+[Back to top ⇧](#table-of-contents)
 
 ### API Endpoints
 
@@ -511,6 +517,7 @@ Result:
   |---------------|--------|
   |	Only authenticated owners can delete their own commentlike | :white_check_mark: |
 
+[Back to top ⇧](#table-of-contents)
 
 ## Credits
 
@@ -771,6 +778,8 @@ Result:
   - KEY: `CLIENT_ORIGIN` | VALUE: `app-name.herokuapp.com` (The deployed React project)
   - KEY: `CLIENT_ORIGIN_DEV` | VALUE: `3000-kattis91-app-name.gitpod.io` (Gitpod Preview link)
 
+[Back to top ⇧](#table-of-contents)
+
 ## Development 
 
 ## Fork
@@ -799,3 +808,5 @@ Result:
 - Open Terminal and change the current working directory to the location where you want the cloned directory.
 
 - Type `git clone`, and paste the URL you copied earlier. Press **Enter**
+
+[Back to top ⇧](#table-of-contents)
