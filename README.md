@@ -171,157 +171,6 @@ The initial plan was developed during the project. There have been some changes 
 
 - **'unique_together'** makes sure a user can't like the same comment twice.
 
-## API Endpoints
-
-### Posts
-
-#### /posts
-
-| Feature | Status |
-|---------------|--------|
-| Correct URL path | :white_check_mark: |
-|	Add post functionality available for ONLY logged-in user  | :white_check_mark: |
-| Field validation works correctly | :white_check_mark: |
-|	Correct post fields | :white_check_mark: |
-|	Search functionality | :white_check_mark: |
-|	Filter functionality | :white_check_mark: |
-|	Ordering functionality | :white_check_mark: |
-|	Correct URL for the default image | :white_check_mark: |
-|	Pagination functionality | :white_check_mark: |
-|	Likes_count field working correctly | :white_check_mark: |
-|	Comments_count field working correctly | :white_check_mark: |
-|	Bookmarks_count field working correctly | :white_check_mark: |
-
-#### /posts/id
-
-| Feature | Status |
-|---------------|--------|
-| Correct URL path | :white_check_mark: |
-| Returns detail about the selected post | :white_check_mark: |
-|	Only authenticated owners can update their own posts | :white_check_mark: |
-|	Only authenticated owners can delete their own posts | :white_check_mark: |
-
-#### /explorers
-
-| Feature | Status |
-|---------------|--------|
-| User explorer profile automatically created on Sign Up | :white_check_mark: |
-|	Correct URL path | :white_check_mark: |
-| Correct explorer fields | :white_check_mark: |
-|	Default image URLs correct | :white_check_mark: |
-|	Follower_count working correctly | :white_check_mark: |
-|	Following_count field functionality working correctly | :white_check_mark: |
-|	Favourites_count field functionality working correctly | :white_check_mark: |
-|	Favoriting_count field functionality working correctly | :white_check_mark: |
-
-#### /explorers/id
-
-| Feature | Status |
-|---------------|--------|
-| Correct URL path | :white_check_mark: |
-| Retrieves explorer details for the user id specified in the URL | :white_check_mark: |
-|	Only authenticated users who owns the profile can update their own profiles | :white_check_mark: |
-
-#### /comments
-
-| Feature | Status |
-|---------------|--------|
-| Correct URL path | :white_check_mark: |
-|	Add comment functionality available for ONLY logged-in users | :white_check_mark: |
-|	Correct comment fields | :white_check_mark: |
-|	Filter functionality | :white_check_mark: |
-|	Pagination functionality | :white_check_mark: |
-|	Correct post id displayed | :white_check_mark: |
-| "created_at" and "updated_at" fields aew displayed in the right format | :white_check_mark: |
-
-#### /comments/id
-
-| Feature | Status |
-|---------------|--------|
-| Correct URL path | :white_check_mark: |
-|	Only authenticated owners can edit their comments | :white_check_mark: |
-|	Only authenticated owners can delete their comments| :white_check_mark: |
-
-#### /likes
-
-| Feature | Status |
-|---------------|--------|
-|	Correct URL path | :white_check_mark: |
-|	Add like functionality available for ONLY logged-in users | :white_check_mark: |
-|	Correct post id | :white_check_mark: |
-|	Correct owner | :white_check_mark: |
-
-#### /likes/id
-
-| Feature | Status |
-|---------------|--------|
-|	Only authenticated owners can delete their own like | :white_check_mark: |
-
-#### /bookmarks
-
-| Feature | Status |
-|---------------|--------|
-|	Correct URL path | :white_check_mark: |
-|	Add bookmark functionality available for ONLY logged-in users | :white_check_mark: |
-|	Correct post id | :white_check_mark: |
-|	Correct owner | :white_check_mark: |
-
-#### /bookmarks/id
-
-| Feature | Status |
-|---------------|--------|
-|	Only authenticated owners can delete their own bookmarks | :white_check_mark: |
-
-#### /followers
-
-| Feature | Status |
-|---------------|--------|
-|	Correct URL path | :white_check_mark: |
-|	Follow functionality available for ONLY logged-in users | :white_check_mark: |
-|	Correct follow fields | :white_check_mark: |
-| Correct owner is displayed | :white_check_mark: |
-|	Correct followed_name is displayed | :white_check_mark: |
-| Correct follow id is generated :white_check_mark: |
-
-#### /followers/id
-
-| Feature | Status |
-|---------------|--------|
-|	Only authenticated owners can unfollow other users | :white_check_mark: |
-
-#### /favourites
-
-| Feature | Status |
-|---------------|--------|
-|	Correct URL path | :white_check_mark: |
-|	Favourite functionality available for ONLY logged-in users | :white_check_mark: |
-|	Correct favourite fields | :white_check_mark: |
-| Correct owner is displayed | :white_check_mark: |
-|	Correct favorited_name is displayed | :white_check_mark: |
-| Correct favorited id is generated | :white_check_mark: |
-
-#### /favourites/id
-
-| Feature | Status |
-|---------------|--------|
-|	Only authenticated owners can remove other users from favorite list | :white_check_mark: |
-
-#### /commentlikes
-
-| Feature | Status |
-|---------------|--------|
-|	Correct URL path | :white_check_mark: |
-|	Add commentlike functionality available for ONLY logged-in users | :white_check_mark: |
-|	Correct comment id is displayed | :white_check_mark: |
-|	Correct owner is displayed| :white_check_mark: |
-
-#### /commentlikes/id
-
-| Feature | Status |
-|---------------|--------|
-|	Only authenticated owners can delete their own commentlike | :white_check_mark: |
-
-
 ## Testing
 
 ### Validator Testing
@@ -462,6 +311,170 @@ Result:
 ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1699393277/explorer_detail_view_tests_y5uehc.png)
 
 </details>
+
+### API Endpoints
+
+#### Posts
+
+- /posts
+
+  | Feature | Status |
+  |---------------|--------|
+  | Correct URL path | :white_check_mark: |
+  |	Add post functionality available for ONLY logged-in user  | :white_check_mark: |
+  | Field validation works correctly | :white_check_mark: |
+  |	Correct post fields | :white_check_mark: |
+  |	Search functionality | :white_check_mark: |
+  |	Filter functionality | :white_check_mark: |
+  |	Ordering functionality | :white_check_mark: |
+  |	Correct URL for the default image | :white_check_mark: |
+  |	Pagination functionality | :white_check_mark: |
+  |	Likes_count field working correctly | :white_check_mark: |
+  |	Comments_count field working correctly | :white_check_mark: |
+  |	Bookmarks_count field working correctly | :white_check_mark: |
+
+- /posts/id
+
+  | Feature | Status |
+  |---------------|--------|
+  | Correct URL path | :white_check_mark: |
+  | Returns detail about the selected post | :white_check_mark: |
+  |	Only authenticated owners can update their own posts | :white_check_mark: |
+  |	Only authenticated owners can delete their own posts | :white_check_mark: |
+
+#### Explorers
+
+- /explorers
+
+  | Feature | Status |
+  |---------------|--------|
+  | User explorer profile automatically created on Sign Up | :white_check_mark: |
+  |	Correct URL path | :white_check_mark: |
+  | Correct explorer fields | :white_check_mark: |
+  |	Default image URLs correct | :white_check_mark: |
+  |	Follower_count working correctly | :white_check_mark: |
+  |	Following_count field functionality working correctly | :white_check_mark: |
+  |	Favourites_count field functionality working correctly | :white_check_mark: |
+  |	Favoriting_count field functionality working correctly | :white_check_mark: |
+
+- /explorers/id
+
+  | Feature | Status |
+  |---------------|--------|
+  | Correct URL path | :white_check_mark: |
+  | Retrieves explorer details for the user id specified in the URL | :white_check_mark: |
+  |	Only authenticated users who owns the profile can update their own profiles | :white_check_mark: |
+
+#### Comments
+
+- /comments
+
+  | Feature | Status |
+  |---------------|--------|
+  | Correct URL path | :white_check_mark: |
+  |	Add comment functionality available for ONLY logged-in users | :white_check_mark: |
+  |	Correct comment fields | :white_check_mark: |
+  |	Filter functionality | :white_check_mark: |
+  |	Pagination functionality | :white_check_mark: |
+  |	Correct post id displayed | :white_check_mark: |
+  | "created_at" and "updated_at" fields aew displayed in the right format | :white_check_mark: |
+
+- /comments/id
+
+  | Feature | Status |
+  |---------------|--------|
+  | Correct URL path | :white_check_mark: |
+  |	Only authenticated owners can edit their comments | :white_check_mark: |
+  |	Only authenticated owners can delete their comments| :white_check_mark: |
+
+#### Likes
+
+- /likes
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Correct URL path | :white_check_mark: |
+  |	Add like functionality available for ONLY logged-in users | :white_check_mark: |
+  |	Correct post id | :white_check_mark: |
+  |	Correct owner | :white_check_mark: |
+
+- /likes/id
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Only authenticated owners can delete their own like | :white_check_mark: |
+
+#### Bookmarks
+
+- /bookmarks
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Correct URL path | :white_check_mark: |
+  |	Add bookmark functionality available for ONLY logged-in users | :white_check_mark: |
+  |	Correct post id | :white_check_mark: |
+  |	Correct owner | :white_check_mark: |
+
+- /bookmarks/id
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Only authenticated owners can delete their own bookmarks | :white_check_mark: |
+
+#### Followers
+
+- /followers
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Correct URL path | :white_check_mark: |
+  |	Follow functionality available for ONLY logged-in users | :white_check_mark: |
+  |	Correct follow fields | :white_check_mark: |
+  | Correct owner is displayed | :white_check_mark: |
+  |	Correct followed_name is displayed | :white_check_mark: |
+  | Correct follow id is generated :white_check_mark: |
+
+- /followers/id
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Only authenticated owners can unfollow other users | :white_check_mark: |
+
+#### Favourites
+
+- /favourites
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Correct URL path | :white_check_mark: |
+  |	Favourite functionality available for ONLY logged-in users | :white_check_mark: |
+  |	Correct favourite fields | :white_check_mark: |
+  | Correct owner is displayed | :white_check_mark: |
+  |	Correct favorited_name is displayed | :white_check_mark: |
+  | Correct favorited id is generated | :white_check_mark: |
+
+- /favourites/id
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Only authenticated owners can remove other users from favorite list | :white_check_mark: |
+
+#### CommentLikes
+- /commentlikes
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Correct URL path | :white_check_mark: |
+  |	Add commentlike functionality available for ONLY logged-in users | :white_check_mark: |
+  |	Correct comment id is displayed | :white_check_mark: |
+  |	Correct owner is displayed| :white_check_mark: |
+
+- /commentlikes/id
+
+  | Feature | Status |
+  |---------------|--------|
+  |	Only authenticated owners can delete their own commentlike | :white_check_mark: |
+
 
 ## Credits
 
