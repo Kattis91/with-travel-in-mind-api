@@ -276,12 +276,12 @@ The initial plan was developed during the project. There have been some changes 
 
 | Feature | Status |
 |---------------|--------|
-|	Correct URL path |
-|	Follow functionality available for ONLY logged-in users |
-|	Correct follow fields |
-| Correct owner is displayed |
-|	Correct followed_name is displayed |
-| Correct follow id is generated
+|	Correct URL path | :white_check_mark: |
+|	Follow functionality available for ONLY logged-in users | :white_check_mark: |
+|	Correct follow fields | :white_check_mark: |
+| Correct owner is displayed | :white_check_mark: |
+|	Correct followed_name is displayed | :white_check_mark: |
+| Correct follow id is generated :white_check_mark: |
 
 #### /followers/id
 
