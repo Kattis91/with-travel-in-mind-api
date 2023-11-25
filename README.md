@@ -171,6 +171,36 @@ The initial plan was developed during the project. There have been some changes 
 
 - **'unique_together'** makes sure a user can't like the same comment twice.
 
+## API Endpoints
+
+### Posts
+
+#### /posts
+
+| Feature | Status |
+|---------------|--------|
+| Correct URL path | :white_check_mark: |
+|	Add post functionality available for ONLY logged-in user  | :white_check_mark: |
+| Validation works correctly | :white_check_mark: |
+|	Correct post fields | :white_check_mark: |
+|	Search functionality | :white_check_mark: |
+|	Filter functionality | :white_check_mark: |
+|	Ordering functionality | :white_check_mark: |
+|	Correct URL for the default image | :white_check_mark: |
+|	Pagination functionality | :white_check_mark: |
+|	Likes_count field working correctly | :white_check_mark: |
+|	Comments_count field working correctly | :white_check_mark: |
+|	Bookmarks_count field working correctly | :white_check_mark: |
+
+#### /posts/id
+
+| Feature | Status |
+|---------------|--------|
+| Correct URL path | :white_check_mark: |
+| Returns detail about the selected post | :white_check_mark: |
+|	Only authenticated owners can update their own posts | :white_check_mark: |
+|	Only authenticated owners can delete their own posts | :white_check_mark: |
+
 ## Testing
 
 ### Validator Testing
