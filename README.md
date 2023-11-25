@@ -289,6 +289,23 @@ The initial plan was developed during the project. There have been some changes 
 |---------------|--------|
 |	Only authenticated owners can unfollow other users | :white_check_mark: |
 
+#### /favourites
+
+| Feature | Status |
+|---------------|--------|
+|	Correct URL path | :white_check_mark: |
+|	Favourite functionality available for ONLY logged-in users | :white_check_mark: |
+|	Correct favourite fields | :white_check_mark: |
+| Correct owner is displayed | :white_check_mark: |
+|	Correct favorited_name is displayed | :white_check_mark: |
+| Correct favorited id is generated | :white_check_mark: |
+
+#### /favourites/id
+
+| Feature | Status |
+|---------------|--------|
+|	Only authenticated owners can remove other users from favorite list | :white_check_mark: |
+
 
 ## Testing
 
