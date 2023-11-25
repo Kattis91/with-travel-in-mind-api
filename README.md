@@ -397,6 +397,7 @@ Result:
   |	Add like functionality available for ONLY logged-in users | :white_check_mark: |
   |	Correct post id | :white_check_mark: |
   |	Correct owner | :white_check_mark: |
+  | It is NOT possible to like the same post twice | :white_check_mark: |
 
 - /likes/id
 
@@ -414,6 +415,7 @@ Result:
   |	Add bookmark functionality available for ONLY logged-in users | :white_check_mark: |
   |	Correct post id | :white_check_mark: |
   |	Correct owner | :white_check_mark: |
+  | It is NOT possible to bookmark the same post twice | :white_check_mark: |
 
 - /bookmarks/id
 
@@ -433,6 +435,7 @@ Result:
   | Correct owner is displayed | :white_check_mark: |
   |	Correct followed_name is displayed | :white_check_mark: |
   | Correct follow id is generated :white_check_mark: |
+  | It is NOT possible to follow the same explorer twice | :white_check_mark: |
 
 - /followers/id
 
@@ -452,6 +455,7 @@ Result:
   | Correct owner is displayed | :white_check_mark: |
   |	Correct favorited_name is displayed | :white_check_mark: |
   | Correct favorited id is generated | :white_check_mark: |
+  | It is NOT possible to favorite the same explorer twice | :white_check_mark: |
 
 - /favourites/id
 
@@ -460,6 +464,7 @@ Result:
   |	Only authenticated owners can remove other users from favorite list | :white_check_mark: |
 
 #### CommentLikes
+
 - /commentlikes
 
   | Feature | Status |
@@ -468,6 +473,7 @@ Result:
   |	Add commentlike functionality available for ONLY logged-in users | :white_check_mark: |
   |	Correct comment id is displayed | :white_check_mark: |
   |	Correct owner is displayed| :white_check_mark: |
+  | It is NOT possible to like the same comment twice | :white_check_mark: |
 
 - /commentlikes/id
 
