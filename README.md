@@ -239,9 +239,8 @@ The initial plan was developed during the project. There have been some changes 
 | Feature | Status |
 |---------------|--------|
 | Correct URL path | :white_check_mark: |
-|	Only authenticated owners can edit their posts | :white_check_mark: |
+|	Only authenticated owners can edit their comments | :white_check_mark: |
 |	Only authenticated owners can delete their comments| :white_check_mark: |
-
 
 #### /likes
 
@@ -257,6 +256,21 @@ The initial plan was developed during the project. There have been some changes 
 | Feature | Status |
 |---------------|--------|
 |	Only authenticated owners can delete their own like | :white_check_mark: |
+
+#### /bookmarks
+
+| Feature | Status |
+|---------------|--------|
+|	Correct URL path | :white_check_mark: |
+|	Add bookmark functionality available for ONLY logged-in users | :white_check_mark: |
+|	Correct post id | :white_check_mark: |
+|	Correct owner | :white_check_mark: |
+
+#### /bookmarks/id
+
+| Feature | Status |
+|---------------|--------|
+|	Only authenticated owners can delete their own bookmarks | :white_check_mark: |
 
 ## Testing
 
