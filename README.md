@@ -1,5 +1,35 @@
 # With Travel in Mind
 
+# Table of Contents
+
+- [Technologies Used](#technologies-used)
+  - [Languages](#languages)
+  - [Frameworks, Libraries and Programs](#frameworks-libraries-and-programs)
+
+- [Database Diagram](#database-diagram)
+
+- [Testing](#testing)
+  - [Validator Testing](#validator-testing)
+  - [Automated testing](#automated-testing)
+  - [API endpoints](#api-endpoints)
+    - [Posts](#posts)
+    - [Explorers](#explorers)
+    - [Comments](#comments)
+    - [Likes](#likes)
+    - [Bookmarks](#bookmarks)
+    - [Followers](#followers)
+    - [Favourites](#favourites)
+    - [CommentLikes](#commentlikes)
+
+  - [Credits](#credits)
+    - [Contents](#contents)
+
+  - [Deployment](#deployment)
+
+  - [Development](#development)
+    - [Fork](#fork)
+    - [Clone](#clone)
+    
 ## Technologies Used
 
 ### Languages
