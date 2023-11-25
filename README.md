@@ -221,7 +221,26 @@ The initial plan was developed during the project. There have been some changes 
 | Correct URL path | :white_check_mark: |
 | Retrieves explorer details for the user id specified in the URL | :white_check_mark: |
 |	Only authenticated users who owns the profile can update their own profiles | :white_check_mark: |
-				
+
+#### /comments
+
+| Feature | Status |
+|---------------|--------|
+| Correct URL path | :white_check_mark: |
+|	Add comment functionality available for ONLY logged-in users | :white_check_mark: |
+|	Correct comment fields | :white_check_mark: |
+|	Filter functionality | :white_check_mark: |
+|	Pagination functionality | :white_check_mark: |
+|	Correct post id displayed | :white_check_mark: |
+| "created_at" and "updated_at" fields aew displayed in the right format | :white_check_mark: |
+
+#### /comments/id
+
+| Feature | Status |
+|---------------|--------|
+| Correct URL path | :white_check_mark: |
+|	Only authenticated owners can edit their posts | :white_check_mark: |
+|	Only authenticated owners can delete their comments| :white_check_mark: |
 
 ## Testing
 
