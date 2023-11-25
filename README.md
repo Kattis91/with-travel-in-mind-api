@@ -242,6 +242,22 @@ The initial plan was developed during the project. There have been some changes 
 |	Only authenticated owners can edit their posts | :white_check_mark: |
 |	Only authenticated owners can delete their comments| :white_check_mark: |
 
+
+#### /likes
+
+| Feature | Status |
+|---------------|--------|
+|	Correct URL path | :white_check_mark: |
+|	Add like functionality available for ONLY logged-in users | :white_check_mark: |
+|	Correct post id | :white_check_mark: |
+|	Correct owner | :white_check_mark: |
+
+#### /likes/id
+
+| Feature | Status |
+|---------------|--------|
+|	Only authenticated owners can delete their own like | :white_check_mark: |
+
 ## Testing
 
 ### Validator Testing
