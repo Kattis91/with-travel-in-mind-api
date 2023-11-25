@@ -181,7 +181,7 @@ The initial plan was developed during the project. There have been some changes 
 |---------------|--------|
 | Correct URL path | :white_check_mark: |
 |	Add post functionality available for ONLY logged-in user  | :white_check_mark: |
-| Validation works correctly | :white_check_mark: |
+| Field validation works correctly | :white_check_mark: |
 |	Correct post fields | :white_check_mark: |
 |	Search functionality | :white_check_mark: |
 |	Filter functionality | :white_check_mark: |
@@ -200,6 +200,28 @@ The initial plan was developed during the project. There have been some changes 
 | Returns detail about the selected post | :white_check_mark: |
 |	Only authenticated owners can update their own posts | :white_check_mark: |
 |	Only authenticated owners can delete their own posts | :white_check_mark: |
+
+#### /explorers
+
+| Feature | Status |
+|---------------|--------|
+| User explorer profile automatically created on Sign Up | :white_check_mark: |
+|	Correct URL path | :white_check_mark: |
+| Correct explorer fields | :white_check_mark: |
+|	Default image URLs correct | :white_check_mark: |
+|	Follower_count working correctly | :white_check_mark: |
+|	Following_count field functionality working correctly | :white_check_mark: |
+|	Favourites_count field functionality working correctly | :white_check_mark: |
+|	Favoriting_count field functionality working correctly | :white_check_mark: |
+
+#### /explorers/id
+
+| Feature | Status |
+|---------------|--------|
+| Correct URL path | :white_check_mark: |
+| Retrieves explorer details for the user id specified in the URL | :white_check_mark: |
+|	Only authenticated users who owns the profile can update their own profiles | :white_check_mark: |
+				
 
 ## Testing
 
