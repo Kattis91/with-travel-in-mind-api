@@ -23,6 +23,8 @@
     - [Favourites](#favourites)
     - [CommentLikes](#commentlikes)
 
+  - [Fixed Bugs](#fixed-bugs)
+
   - [Credits](#credits)
     - [Media](#media)
     - [Content](#content)
