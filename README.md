@@ -30,6 +30,19 @@
     - [Content](#content)
 
   - [Deployment](#deployment)
+    - [Create Heroku App](#create-heroku-app)
+    - [Create a new external database](#create-a-new-external-database)
+    - [Install more libraries](#install-more-libraries)
+    - [Get images stored on Cloudinary](#get-images-stored-on-cloudinary)
+    - [Create an env.py file](#create-an-envpy-file)
+    - [Update settings.py](#update-settingspy)
+    - [Ensure the project requirements.txt file is up to date](#ensure-the-project-requirementstxt-file-is-up-to-date)
+    - [Create a Procfile](#create-a-procfile)
+    - [Go back to Heroku](#go-back-to-heroku)
+    
+  - [Make some changes in order to use this API with the upcoming Front End project](#make-some-changes-in-order-to-use-this-api-with-the-upcoming-front-end-project)
+
+  - [Tell the API to accept request from the React project](#tell-the-api-to-accept-request-from-the-react-project)
 
   - [Development](#development)
     - [Fork](#fork)
@@ -527,7 +540,8 @@ Result:
 ## Fixed Bugs
 
 - The error message below got displayed after I have changed the name of the "region" field to the "region_you_would_like_to_explore" field, made migrations and migrated the chages.
-**`Field name 'region' is not valid for model 'Explorer'`**
+
+  **`Field name 'region' is not valid for model 'Explorer'`**
 
   **Fix:** Change the name of the mentioned field in the Meta class in serializers.py as well.
 
@@ -562,6 +576,8 @@ Result:
 - [Django REST Framework Documentation](https://www.django-rest-framework.org/) was used throughout the project to gain more knowledge about different concepts.
 
 - [Django Secret Key Generator](https://miniwebtool.com/django-secret-key-generator/) was used to generate Django Secret Key.
+
+[Back to top ⇧](#table-of-contents)
 
 ## Deployment
 
@@ -756,7 +772,9 @@ Result:
 
 - **Optional**: Click the **"Enable Automatic Deploys"** button to make it possible for Heroku to rebuild the app a new change is pushed to GitHub repository.
 
-### Make some changes in order to use this API with the upcoming Front End project.
+[Back to top ⇧](#table-of-contents)
+
+## Make some changes in order to use this API with the upcoming Front End project.
 
 - **Adding ALLOWED_HOSTS**:
 
@@ -801,7 +819,7 @@ Result:
 
 - Go to Heroku. Click on the **"Deploy"** section on the top of the page. Click on **"Deploy Branch"**.
 
-### Tell the API to accept request from the React project.
+## Tell the API to accept request from the React project.
 
 - Go to the Heroku dashboard and open the **Settings** tab:
 
@@ -814,7 +832,7 @@ Result:
 
 ## Development 
 
-## Fork
+### Fork
 
 - Log in to **GitHub** and find the repository for this project, [_Kattis91/with_travel_in_mind_api_](https://github.com/Kattis91/with-travel-in-mind-api).
 
@@ -826,7 +844,7 @@ Result:
 
 - The fork is now in your personal account and can be changed in the way you want.
 
-## Clone
+### Clone
 
 - On **GitHub**, navigate to your fork of the _Kattis91/with_travel_in_mind_api_ repository.
 
