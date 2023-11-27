@@ -23,30 +23,30 @@
     - [Favourites](#favourites)
     - [CommentLikes](#commentlikes)
 
-  - [Fixed Bugs](#fixed-bugs)
+- [Fixed Bugs](#fixed-bugs)
 
-  - [Credits](#credits)
-    - [Media](#media)
-    - [Content](#content)
+- [Credits](#credits)
+  - [Media](#media)
+  - [Content](#content)
 
-  - [Deployment](#deployment)
-    - [Create Heroku App](#create-heroku-app)
-    - [Create a new external database](#create-a-new-external-database)
-    - [Install more libraries](#install-more-libraries)
-    - [Get images stored on Cloudinary](#get-images-stored-on-cloudinary)
-    - [Create an env.py file](#create-an-envpy-file)
-    - [Update settings.py](#update-settingspy)
-    - [Ensure the project requirements.txt file is up to date](#ensure-the-project-requirementstxt-file-is-up-to-date)
-    - [Create a Procfile](#create-a-procfile)
-    - [Go back to Heroku](#go-back-to-heroku)
+- [Deployment](#deployment)
+  - [Create Heroku App](#create-heroku-app)
+  - [Create a new external database](#create-a-new-external-database)
+  - [Install more libraries](#install-more-libraries)
+  - [Get images stored on Cloudinary](#get-images-stored-on-cloudinary)
+  - [Create an env.py file](#create-an-envpy-file)
+  - [Update settings.py](#update-settingspy)
+  - [Ensure the project requirements.txt file is up to date](#ensure-the-project-requirementstxt-file-is-up-to-date)
+  - [Create a Procfile](#create-a-procfile)
+  - [Go back to Heroku](#go-back-to-heroku)
     
-  - [Make some changes in order to use this API with the upcoming Front End project](#make-some-changes-in-order-to-use-this-api-with-the-upcoming-front-end-project)
+- [Make some changes in order to use this API with the upcoming Front End project](#make-some-changes-in-order-to-use-this-api-with-the-upcoming-front-end-project)
 
-  - [Tell the API to accept request from the React project](#tell-the-api-to-accept-request-from-the-react-project)
+- [Tell the API to accept request from the React project](#tell-the-api-to-accept-request-from-the-react-project)
 
-  - [Development](#development)
-    - [Fork](#fork)
-    - [Clone](#clone)
+- [Development](#development)
+  - [Fork](#fork)
+  - [Clone](#clone)
 
 ## Technologies Used
 
