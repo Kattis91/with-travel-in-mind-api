@@ -522,6 +522,25 @@ Result:
 
 [Back to top ⇧](#table-of-contents)
 
+## Fixed Bugs
+
+- The error message below got displayed after I have changed the name of the "region" field to the "region_you_would_like_to_explore" field, made migrations and migrated the chages.
+**`Field name 'region' is not valid for model 'Explorer'`**
+
+  **Fix:** Change the name of the mentioned field in the Meta class in serializers.py as well.
+
+- The default profile image was not displaying on the Frontend. It was neither visible in the Folders on Cloudinary.
+
+  ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701102142/cloudinary-page-cannot-be-found_psusnf.png)
+
+  **Fix:** 
+  
+  - Upload the image to Cloudinary one more time.
+
+  - Update the name to match the name in the Explorer Model.
+
+    ![image](https://res.cloudinary.com/dx0imlozl/image/upload/v1701102698/default-profile-image-field_imhfuh.png)
+
 ## Credits
 
 ### Media
